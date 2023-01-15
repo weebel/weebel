@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$app = new \Weebel\Framework\Application(kernelManager: fn($arguments)=>new \App\KernelManager($arguments));
+
+$app->run('console');
